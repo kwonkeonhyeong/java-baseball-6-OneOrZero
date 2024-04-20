@@ -16,16 +16,29 @@ public class Balls {
 
     public void validateDuplication() {
         for (Ball ball : balls) {
-            if(containCount(ball) == 2) {
+            if (containCount(ball) == 2) {
                 throw new IllegalArgumentException();
             }
         }
     }
 
+    public List<Ball> getBalls() {
+        return balls;
+    }
+
+    public Boolean isContain(Ball checkBall) {
+        for (Ball ball : balls) {
+            if (ball.equals(checkBall)) {
+                return true;
+            }
+        }
+            return false;
+    }
+
     public int containCount(Ball checkBall) {
         int count = 0;
         for (Ball ball : balls) {
-            if(ball.equals(checkBall)) {
+            if (ball.equals(checkBall)) {
                 count++;
             }
         }
