@@ -5,8 +5,7 @@ import java.util.*;
 public class Computer implements ConvertToArray{
     Set<Integer> cpArray = new LinkedHashSet<>();
     public Integer[] computerNum(){
-        Random rd = new Random();
-        int cpNumber = rd.nextInt(999)+100;
+        int cpNumber = Randoms.pickNumberInRange(1, 9);
         cpArray = ConvertToArray.convert(cpNumber);
         Iterator<Integer> iterator = cpArray.iterator();
         while (iterator.hasNext()){
@@ -16,7 +15,7 @@ public class Computer implements ConvertToArray{
             }
         }
         while (cpArray.size() < 3) {
-            int num = rd.nextInt(9) + 1;
+            int num = Randoms.pickNumberInRange(1, 9);
             cpArray.add(num);
         }
         Integer[] com = cpArray.toArray(new Integer[cpArray.size()]);

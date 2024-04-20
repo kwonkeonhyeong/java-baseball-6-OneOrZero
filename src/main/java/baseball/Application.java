@@ -1,7 +1,7 @@
 package baseball;
 
 import java.util.*;
-
+import camp.nextstep.edu.missionutils.Console;
 
 public class Application {
     public static  void main(String[] args) {
@@ -27,7 +27,7 @@ public class Application {
             }
 
             System.out.println("게임을 새로 시작하려면 1, 종료하려면 2을 입력하세요.");
-            int answer = sc.nextInt();
+            int answer = Integer.parseInt(Console.readLine());
             if (answer == 1) {
                 gameRestart = true;
             } else if (answer == 2) {
