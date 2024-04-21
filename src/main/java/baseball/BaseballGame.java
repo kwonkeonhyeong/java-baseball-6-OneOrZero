@@ -1,16 +1,17 @@
 package baseball;
 
-import static baseball.Constants.RESTART;
+import static baseball.constants.Constants.RESTART;
 
 import baseball.ballgenerator.BallsGenerator;
 import baseball.ballgenerator.InputGenerator;
 import baseball.ballgenerator.RandomGenerator;
+import baseball.constants.JudgementBall;
 import java.util.List;
 
 public class BaseballGame {
 
-    private Input input;
-    private Output output;
+    private final Input input;
+    private final Output output;
     private String code;
 
     public BaseballGame() {
@@ -24,7 +25,6 @@ public class BaseballGame {
         BallsGenerator playerGenerator = new InputGenerator();
 
         Balls computerBalls = computerGenerator.createBalls();
-        System.out.println(computerBalls);
         List<JudgementBall> hint;
 
         do {
@@ -41,7 +41,7 @@ public class BaseballGame {
         return code.equals(RESTART);
     }
 
-    public boolean checkFinish(List<JudgementBall> hint) {
+    private boolean checkFinish(List<JudgementBall> hint) {
         return hint.contains(JudgementBall.BALL) || hint.contains(JudgementBall.OUT);
     }
 }

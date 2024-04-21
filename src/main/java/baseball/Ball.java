@@ -1,7 +1,7 @@
 package baseball;
 
-import static baseball.Constants.MAX_NUMBER;
-import static baseball.Constants.MIN_NUMBER;
+import static baseball.constants.Constants.MAX_NUMBER;
+import static baseball.constants.Constants.MIN_NUMBER;
 
 import java.util.Objects;
 
@@ -15,25 +15,11 @@ public class Ball {
         validateBall();
     }
 
-    public void validateBall() {
-        validateRange();
-    }
-
-    public void validateRange() {
-        if (number < MIN_NUMBER || number > MAX_NUMBER) {
-            throw new IllegalArgumentException();
-        }
-    }
-
     public Boolean checkPosition(Ball checkBall) {
         if(checkBall.getPosition() == position) {
             return true;
         }
         return false;
-    }
-
-    private int getPosition() {
-        return position;
     }
 
     @Override
@@ -51,4 +37,19 @@ public class Ball {
     public int hashCode() {
         return Objects.hashCode(number);
     }
+
+    private void validateBall() {
+        validateRange();
+    }
+
+    private void validateRange() {
+        if (number < MIN_NUMBER || number > MAX_NUMBER) {
+            throw new IllegalArgumentException();
+        }
+    }
+
+    private int getPosition() {
+        return position;
+    }
+
 }

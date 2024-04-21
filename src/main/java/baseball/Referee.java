@@ -1,10 +1,11 @@
 package baseball;
 
 
-import static baseball.JudgementBall.BALL;
-import static baseball.JudgementBall.OUT;
-import static baseball.JudgementBall.STRIKE;
+import static baseball.constants.JudgementBall.BALL;
+import static baseball.constants.JudgementBall.OUT;
+import static baseball.constants.JudgementBall.STRIKE;
 
+import baseball.constants.JudgementBall;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +27,7 @@ public class Referee {
         return hint;
     }
 
-    public JudgementBall judgeBall(Balls computerBalls, Ball playBall) {
+    private JudgementBall judgeBall(Balls computerBalls, Ball playBall) {
         List<Ball> balls = computerBalls.getBalls();
         for (int i = 0; i < balls.size(); i++) {
             Ball ball = balls.get(i);

@@ -1,8 +1,8 @@
 package baseball.ballgenerator;
 
-import static baseball.Constants.BALLS_SIZE;
-import static baseball.Constants.MAX_NUMBER;
-import static baseball.Constants.MIN_NUMBER;
+import static baseball.constants.Constants.BALLS_SIZE;
+import static baseball.constants.Constants.MAX_NUMBER;
+import static baseball.constants.Constants.MIN_NUMBER;
 
 import baseball.Ball;
 import baseball.Balls;

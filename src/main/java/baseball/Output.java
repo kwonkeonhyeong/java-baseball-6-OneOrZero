@@ -1,12 +1,13 @@
 package baseball;
 
-import static baseball.Constants.BALL;
-import static baseball.Constants.END_MESSAGE;
-import static baseball.Constants.NOTING;
-import static baseball.Constants.START_MESSAGE;
-import static baseball.Constants.STRIKE;
-import static baseball.Constants.STRIKE_AND_BALL;
+import static baseball.constants.Constants.BALL;
+import static baseball.constants.Constants.END_MESSAGE;
+import static baseball.constants.Constants.NOTING;
+import static baseball.constants.Constants.START_MESSAGE;
+import static baseball.constants.Constants.STRIKE;
+import static baseball.constants.Constants.STRIKE_AND_BALL;
 
+import baseball.constants.JudgementBall;
 import java.util.List;
 
 public class Output {

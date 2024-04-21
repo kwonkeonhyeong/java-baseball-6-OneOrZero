@@ -11,11 +11,15 @@ public class Balls {
         validateBalls();
     }
 
-    public void validateBalls() {
+    public List<Ball> getBalls() {
+        return balls;
+    }
+
+    private void validateBalls() {
         validateDuplication();
     }
 
-    public void validateDuplication() {
+    private void validateDuplication() {
         int duplicateCount = 2;
         for (Ball ball : balls) {
             if (containCount(ball) == duplicateCount) {
@@ -24,20 +28,7 @@ public class Balls {
         }
     }
 
-    public List<Ball> getBalls() {
-        return balls;
-    }
-
-    public Boolean isContain(Ball checkBall) {
-        for (Ball ball : balls) {
-            if (ball.equals(checkBall)) {
-                return true;
-            }
-        }
-            return false;
-    }
-
-    public int containCount(Ball checkBall) {
+    private int containCount(Ball checkBall) {
         int count = 0;
         for (Ball ball : balls) {
             if (ball.equals(checkBall)) {
