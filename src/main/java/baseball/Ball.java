@@ -1,5 +1,8 @@
 package baseball;
 
+import static baseball.Constants.MAX_NUMBER;
+import static baseball.Constants.MIN_NUMBER;
+
 import java.util.Objects;
 
 public class Ball {
@@ -17,7 +20,7 @@ public class Ball {
     }
 
     public void validateRange() {
-        if (number < 1 || number > 9) {
+        if (number < MIN_NUMBER || number > MAX_NUMBER) {
             throw new IllegalArgumentException();
         }
     }

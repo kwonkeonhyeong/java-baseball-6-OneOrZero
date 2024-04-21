@@ -1,5 +1,7 @@
 package baseball;
 
+import static baseball.Constants.RESTART;
+
 import baseball.ballgenerator.BallsGenerator;
 import baseball.ballgenerator.InputGenerator;
 import baseball.ballgenerator.RandomGenerator;
@@ -36,7 +38,7 @@ public class BaseballGame {
     }
 
     public boolean checkRestart() {
-        return code.equals("1");
+        return code.equals(RESTART);
     }
 
     public boolean checkFinish(List<JudgementBall> hint) {

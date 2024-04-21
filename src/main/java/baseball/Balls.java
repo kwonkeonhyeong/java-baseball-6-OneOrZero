@@ -3,6 +3,7 @@ package baseball;
 import java.util.List;
 
 public class Balls {
+
     private final List<Ball> balls;
 
     public Balls(List<Ball> balls) {
@@ -15,8 +16,9 @@ public class Balls {
     }
 
     public void validateDuplication() {
+        int duplicateCount = 2;
         for (Ball ball : balls) {
-            if (containCount(ball) == 2) {
+            if (containCount(ball) == duplicateCount) {
                 throw new IllegalArgumentException();
             }
         }
@@ -43,12 +45,5 @@ public class Balls {
             }
         }
         return count;
-    }
-
-    @Override
-    public String toString() {
-        return "Balls{" +
-                "balls=" + balls +
-                '}';
     }
 }

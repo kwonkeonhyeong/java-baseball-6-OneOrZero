@@ -1,24 +1,31 @@
 package baseball;
 
+import static baseball.Constants.BALLS_SIZE;
+import static baseball.Constants.EXIT;
+import static baseball.Constants.INPUT_NUMBER_MESSAGE;
+import static baseball.Constants.INPUT_RESTART_CODE_MESSAGE;
+import static baseball.Constants.NUMERIC_REGEX;
+import static baseball.Constants.RESTART;
+
 import camp.nextstep.edu.missionutils.Console;
 
 public class Input {
     public String inputNumber() {
-        System.out.print("숫자를 입력해주세요 : ");
+        System.out.print(INPUT_NUMBER_MESSAGE);
         String ballNumber = Console.readLine();
         validateInputNumber(ballNumber);
         return ballNumber;
     }
 
     public String inputRestartCode() {
-        System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
+        System.out.println(INPUT_RESTART_CODE_MESSAGE);
         String code = Console.readLine();
         validateRestartCode(code);
         return code;
     }
 
     public void validateRestartCode(String code) {
-        if(!(code.equals("1") || code.equals("2"))) {
+        if(!(code.equals(RESTART) || code.equals(EXIT))) {
             throw new IllegalArgumentException();
         }
     }
@@ -29,13 +36,13 @@ public class Input {
     }
 
     public void validateNumeric(String value) {
-        if (!value.matches("^[0-9]*$")) {
+        if (!value.matches(NUMERIC_REGEX)) {
             throw new IllegalArgumentException();
         }
     }
 
     public void validateInputLength(String value) {
-        if (value.length() != 3) {
+        if (value.length() != BALLS_SIZE) {
             throw new IllegalArgumentException();
         }
     }
