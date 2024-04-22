@@ -15,12 +15,8 @@ public class Application {
             boolean correct = false;
             while (!correct) {
                 Player player = new Player();
-                try {
-                    player.guessNumber();
-                } catch (IllegalArgumentException e) {
-                    e.printStackTrace();
-                    return;
-                }
+                player.guessNumber();
+
                 correct = computer.checkAnswer(player.getNumber());
             }
 
