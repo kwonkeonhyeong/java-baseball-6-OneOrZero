@@ -30,11 +30,8 @@ public class Application {
             String input = Console.readLine();
             int choice = Integer.parseInt(input);
 
-<<<<<<< HEAD
-            if (choice != 1) {
-=======
             if (choice == 2) {
->>>>>>> origin/yujin
+
                 restart = false;
             }
         }
