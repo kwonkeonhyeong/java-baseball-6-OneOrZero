@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Computer {
-    private List<Integer> number;
+    private final List<Integer> number;
 
     public Computer() {
         number = new ArrayList<>();

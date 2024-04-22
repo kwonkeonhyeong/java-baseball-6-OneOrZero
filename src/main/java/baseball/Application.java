@@ -30,7 +30,7 @@ public class Application {
             String input = Console.readLine();
             int choice = Integer.parseInt(input);
 
-            if (choice != 1) {
+            if (choice == 2) {
                 restart = false;
             }
         }
